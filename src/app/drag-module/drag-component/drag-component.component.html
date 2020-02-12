@@ -7,14 +7,14 @@
                         Drag Area
                     </span>
                 </div>
-                <div class="card-body ht60" cdkDropList [cdkDropListData]="list2" [cdkDropListConnectedTo]="firstList" #secondList="cdkDropList" (cdkDropListDropped)="drop($event)">
+                <div class="card-body " cdkDropList [cdkDropListData]="list2" [cdkDropListConnectedTo]="firstList" #secondList="cdkDropList" (cdkDropListDropped)="drop($event)">
                     <div class="row mx-auto">
-                        <div class="col-3 pop" *ngFor="let itemdrag of list2" cdkDrag>
+                        <div class="col-3 p-3 pop" *ngFor="let itemdrag of list2" cdkDrag>
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-header text-uppercase text-center text-truncate fntSmB">
                                     {{itemdrag.head}}
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body ht60">
                                     <div class="row mx-auto d-flex justify-content-center">
                                         <img src="{{itemdrag.src}}" class="img-fluid">
                                     </div>
@@ -32,14 +32,14 @@
                         Drop Area
                     </span>
                 </div>
-                <div class="card-body ht60" cdkDropList [cdkDropListData]="list1" [cdkDropListConnectedTo]="secondList" #firstList="cdkDropList" (cdkDropListDropped)="drop($event)">
+                <div class="card-body" cdkDropList [cdkDropListData]="list1" [cdkDropListConnectedTo]="secondList" #firstList="cdkDropList" (cdkDropListDropped)="drop($event)">
                         <div class="row mx-auto">
-                            <div class="col-3 pop" *ngFor="let itemdrop of list1" cdkDrag>
+                            <div class="col-3 p-3" *ngFor="let itemdrop of list1" cdkDrag>
                                 <div class="card">
-                                    <div class="card-header">
+                                    <div class="card-header text-uppercase text-center text-truncate fntSmB ">
                                         {{itemdrop.head}}
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body ht60">
                                         <div class="row mx-auto d-flex justify-content-center">
                                             <img src="{{itemdrop.src}}" class="img-fluid">
                                         </div>

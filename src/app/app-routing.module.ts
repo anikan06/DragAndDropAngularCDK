@@ -3,15 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'testApp',
+  //   pathMatch: 'full'
+  // },
   {
     path: '',
-    redirectTo: 'drag',
-    pathMatch: 'full'
+    loadChildren: './nav-module/nav-module.module#NavModuleModule'
   },
-  {
-    path: 'drag',
-    loadChildren: './drag-module/drag-module.module#DragModuleModule'
-  }
+  // {
+  //   path: 'drag',
+  //   loadChildren: './drag-module/drag-module.module#DragModuleModule'
+  // }
 ];
 
 @NgModule({

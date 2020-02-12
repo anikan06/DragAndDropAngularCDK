@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+router-outlet + * {
+    width: 100% !important;
+}
+
+* {
+    color: black;
+}
+
+.bg-theme {
+    background-color: #223b48 !important;
+    // background-color: #377d33!important;
+    color: #fff !important;
+}
+
+.activeNav {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
