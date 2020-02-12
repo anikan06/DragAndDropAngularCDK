@@ -1,3 +1,20 @@
+# Description
+
+This project is only for the refrence purpose.
+This project is devloped using Angular 8, Bootstrap 4, Angular CDK.
+
+# Topic covered:
+1. Angular Module
+  creating a feature module with routing
+  `ng g m moduleName` (Without routing)
+  `ng g m moduleName --routing` (With routing)
+  
+2.  Lazy Loading
+    Loading only the required modules on demand/requirement.
+    
+3. Angular DRAG and DROP 
+   Drag and Drop concept using Angular CDK.
+
 # TestDrag
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
