@@ -1,0 +1,54 @@
+<div class="drag-container container-fluid w-100 px-0">
+    <div class="row mx-auto w-100">
+        <div class="col-6">
+            <div class="card w-100">
+                <div class="card-header">
+                    <span class="fntHd">
+                        Drag Area
+                    </span>
+                </div>
+                <div class="card-body ht60" cdkDropList [cdkDropListData]="list2" [cdkDropListConnectedTo]="firstList" #secondList="cdkDropList" (cdkDropListDropped)="drop($event)">
+                    <div class="row mx-auto">
+                        <div class="col-3 pop" *ngFor="let itemdrag of list2" cdkDrag>
+                            <div class="card">
+                                <div class="card-header">
+                                    {{itemdrag.head}}
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mx-auto d-flex justify-content-center">
+                                        <img src="{{itemdrag.src}}" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card w-100">
+                <div class="card-header">
+                    <span class="fntHd">
+                        Drop Area
+                    </span>
+                </div>
+                <div class="card-body ht60" cdkDropList [cdkDropListData]="list1" [cdkDropListConnectedTo]="secondList" #firstList="cdkDropList" (cdkDropListDropped)="drop($event)">
+                        <div class="row mx-auto">
+                            <div class="col-3 pop" *ngFor="let itemdrop of list1" cdkDrag>
+                                <div class="card">
+                                    <div class="card-header">
+                                        {{itemdrop.head}}
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mx-auto d-flex justify-content-center">
+                                            <img src="{{itemdrop.src}}" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
