@@ -6,17 +6,25 @@ import { NavComponentComponent } from './nav-component/nav-component.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'Home/drag',
+    redirectTo: 'treeView',
     pathMatch: 'full'
   },
   {
-    path: 'Home',
+    path: '',
     component: NavComponentComponent,
     children: [
       {
-        path: 'drag',
-        loadChildren: 'src/app/drag-module/drag-module.module#DragModuleModule'
-      }
+    path: 'treeView',
+    loadChildren: 'src/app/treeview-module/treeview-module.module#TreeviewModuleModule'
+  },
+  {
+    path: 'drag',
+    loadChildren: 'src/app/drag-module/drag-module.module#DragModuleModule'
+  },
+  {
+    path: 'material-tree',
+    loadChildren: 'src/app/material-tree-view/material-tree-view.module#MaterialTreeViewModule'
+  },
     ]
   }
 ];
